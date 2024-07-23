@@ -130,6 +130,23 @@
       ul3 += "</ul>";
 
       console.log(ul3);
+
+      /* **********     Números (Number)     ********** */
+
+      let an = 2;
+      let b = new Number(1);
+      let c = 7.19;
+      let d = "5.6";
+
+      console.log(a, b);
+      console.log(c.toFixed(1)); /* mostrar cierto número de decimales */
+      console.log(parseInt(c)); /* Solo devuelve la parte entera */
+      console.log(parseFloat(c)); /* mostrar decimales */
+      console.log(typeof c, typeof d); /* mostrar que tipo de datos es una variable */
+      console.log(a + b); /* Proceso de suma */
+      console.log(c + d); /* Proceso de concatenación */
+      console.log(c + parseInt(d)); /* Operación de suma con variable number y string */
+      console.log(c + parseFloat(d)); /* Operación de suma con variable number y string */
     </script>
   </body>
 </html>
