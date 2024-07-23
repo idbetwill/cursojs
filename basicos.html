@@ -75,6 +75,26 @@
       console.log(colores);
 
       /* **********     Cadenas de Texto (Strings)     ********** */
+      let nombre = "Will";
+      let apellido = "BetId";
+      let saludo = new String("Hola mundo");
+      let lorem =
+        "                Lorem ipsum dolor sit amet                 , consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+
+      console.log(nombre, apellido, saludo);
+      console.log(
+        nombre.length,
+        apellido.length,
+        saludo.length,
+        nombre.toUpperCase() /*Mayúsculas*/,
+        apellido.toLowerCase() /*Minúsculas*/,
+        lorem.includes("amet") /*Encontrar una palabra*/,
+        lorem.includes("Will") /*Encontrar una palabra*/,
+        lorem /*String original*/,
+        lorem.trim() /*Quita espacios alrededor del texto*/,
+        lorem.split(" ") /*Generar un arreglo, para agregar un separador*/,
+        lorem.split(",")
+      );
     </script>
   </body>
 </html>
