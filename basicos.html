@@ -169,11 +169,38 @@
       console.log(indefinida);
 
       //null es un valor especial que indica la ausencia de un valor
-      let nulo = mull;
+      let nulo = null;
       console.log(null);
 
       let noEsUnNumero = "hola" * 3.7;
       console.log(noEsUnNumero);
+
+      /* **********     Funciones     ********** */
+
+      // Función declarada
+
+      function estoEsUnaFuncion() {
+        console.log("Uno");
+        console.log("Dos");
+        console.log("Tres");
+      }
+
+      // Invocación de función
+      estoEsUnaFuncion();
+      estoEsUnaFuncion();
+      estoEsUnaFuncion();
+
+      function funcionDevuelveValor() {
+        console.log("Uno");
+        return 19;
+        console.log("Dos");
+        console.log("Tres");
+        return "La función ha retornado una cadena de texto";
+      }
+
+      let valorFuncion = funcionDevuelveValor();
+
+      console.log(valorFuncion);
     </script>
   </body>
 </html>
