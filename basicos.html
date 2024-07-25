@@ -201,6 +201,33 @@
       let valorFuncion = funcionDevuelveValor();
 
       console.log(valorFuncion);
+
+      function saludar(nombre = "Desconocido", edad = 0) {
+        /* Parametros de una función (Valores que recibe porque los usará internamente para algo) */
+        console.log(`Hola, mi nombre es ${nombre} y tengo ${edad} años`);
+      }
+
+      saludar("Kenai", 7);
+      saludar();
+
+      // Funciones declaradas vs funciones expresadas
+
+      function funcionDeclarada() {
+        console.log(
+          "Esto es una función declarada, puede invocarse en cualquier parte de nuestro código, incluso antes de que la función sea declarada"
+        );
+      }
+
+      funcionDeclarada();
+
+      //Función anonima
+      const funcionExpresada = function () {
+        console.log(
+          "Esto es una función expresada, es decir una función que se la ha asignado como valor una variable, si invocamos esta función antes de su definiciónm JavaScript no dirá..."
+        );
+      };
+
+      funcionExpresada();
     </script>
   </body>
 </html>
