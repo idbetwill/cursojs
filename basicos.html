@@ -232,9 +232,40 @@
       /* **********     Arreglos (Arrays)     ********** */
 
       const w = [];
-      const z = [1, true, "Hola", ["A", "B", "C"]];
+      const z = [1, true, "Hola", ["A", "B", "C", [1, 2, 3]]];
       console.log(w);
       console.log(z);
+      console.log(z.length); /* Devuelve el número de elementos */
+      console.log(z[2]); /* Extraer valor específico */
+      console.log(z[0]);
+      console.log(z[3]);
+      console.log(z[3][2]); /* Extraer valor de un array dentro de un array*/
+      console.log(z[3][3][0]);
+
+      const q = Array.of("X", "Y", "Z", 9, 8, 7);
+      console.log(q);
+
+      const r = Array(100).fill(false);
+      console.log(r);
+
+      const k = new Array();
+      console.log(k);
+
+      const s = new Array(1, 2, 3, true, false);
+      console.log(s);
+
+      const colors = ["Rojo", "Verde", "Azul"];
+      console.log(colors);
+
+      colors.push("Negro"); /* Añade un elemento a lo último */
+      console.log(colors);
+
+      colors.pop(); /* Quita el último elementos */
+      console.log(colors);
+
+      colors.forEach(function (el, index) {
+        console.log(`<li id="${index}">${el}</li>`);
+      }); /*  */
     </script>
   </body>
 </html>
