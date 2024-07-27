@@ -235,11 +235,11 @@
       const z = [1, true, "Hola", ["A", "B", "C", [1, 2, 3]]];
       console.log(w);
       console.log(z);
-      console.log(z.length); /* Devuelve el número de elementos */
-      console.log(z[2]); /* Extraer valor específico */
+      console.log(z.length); // Devuelve el número de elementos
+      console.log(z[2]); // Extraer valor específico
       console.log(z[0]);
       console.log(z[3]);
-      console.log(z[3][2]); /* Extraer valor de un array dentro de un array*/
+      console.log(z[3][2]); // Extraer valor de un array dentro de un array
       console.log(z[3][3][0]);
 
       const q = Array.of("X", "Y", "Z", 9, 8, 7);
@@ -257,17 +257,69 @@
       const colors = ["Rojo", "Verde", "Azul"];
       console.log(colors);
 
-      colors.push("Negro"); /* Añade un elemento a lo último */
+      colors.push("Negro"); // Añade un elemento a lo último
       console.log(colors);
 
-      colors.pop(); /* Quita el último elementos */
+      colors.pop(); // Quita el último elementos
       console.log(colors);
 
       colors.forEach(function (el, index) {
         console.log(`<li id="${index}">${el}</li>`);
       });
 
-      /* **********     Objetos (Arrays)     ********** */
+      /* **********     Objetos (Objects)     ********** */
+
+      let e = new String("Hola");
+      console.log(e);
+
+      const l = {};
+      console.log(l);
+
+      const y = new Object();
+      console.log(y);
+
+      const user = {
+        nombr: "Will",
+        apellido: "Betancur",
+        edad: 23,
+        pasatiempos: ["Aprender", "Hacer ejercicio", "Fotografía", "Ciclismo"],
+        soltero: false,
+        contacto: {
+          email: "correo@corre.com",
+          instagram: "@usuario",
+          movil: "+57(000)000-0000",
+        },
+
+        saluda: function () {
+          console.log(`Hola`);
+        },
+
+        decirMiNombr: function () {
+          console.log(
+            `Hola, me llamo ${this.nombr} ${this.apellido} y tengo ${this.edad} años y me puedes seguir en instagram como ${this.contacto.instagram}`
+          );
+        },
+      };
+
+      console.log(user);
+      console.log(user["apellido"]);
+      console.log(user["nombr"]);
+      console.log(user.nombr);
+      console.log(user.apellido);
+      console.log(user.edad);
+      console.log(user.soltero);
+      console.log(user.pasatiempos);
+      console.log(user.pasatiempos[2]);
+      console.log(user.contacto);
+      console.log(user.contacto.instagram);
+
+      user.saluda();
+      user.decirMiNombr();
+
+      console.log(Object.keys(user)); // Listar las llaves del objeto
+      console.log(Object.values(user)); // Listar los valores de las llaves del objeto
+      console.log(user.hasOwnProperty("nombr")); // Saber si un objeto tiene una propiedad
+      console.log(user.hasOwnProperty("nacimiento"));
     </script>
   </body>
 </html>
