@@ -47,9 +47,9 @@
       }
       console.log("variable Música antes del Bloque", musica2); */
 
-      /* **********     Constantes (const)     ********** */
+      /* **********     Constantes (const)     **********
 
-      let a; /*Permite declarar una variable vacía*/
+      let a; // Permite declarar una variable vacía
       const PI = 3.1416;
       const nueve = 9;
       console.log(PI);
@@ -57,7 +57,7 @@
       a = "kenai";
       console.log(a);
 
-      /*Objetos y arreglos*/
+      /* Objetos y arreglos
 
       const objeto = {
         nombre: "Jon",
@@ -73,9 +73,9 @@
       colores.push("naranja");
 
       console.log(objeto);
-      console.log(colores);
+      console.log(colores); */
 
-      /* **********     Cadenas de Texto (Strings)     ********** */
+      /* **********     Cadenas de Texto (Strings)     ********** 
       let nombre = "Will";
       let apellido = "BetId";
       let saludo = new String("Hola mundo");
@@ -87,17 +87,17 @@
         nombre.length,
         apellido.length,
         saludo.length,
-        nombre.toUpperCase() /*Mayúsculas*/,
-        apellido.toLowerCase() /*Minúsculas*/,
-        lorem.includes("amet") /*Encontrar una palabra*/,
-        lorem.includes("Will") /*Encontrar una palabra*/,
-        lorem /*String original*/,
-        lorem.trim() /*Quita espacios alrededor del texto*/,
-        lorem.split(" ") /*Generar un arreglo, para agregar un separador*/,
+        nombre.toUpperCase() // Mayúsculas,
+        apellido.toLowerCase() // Minúsculas,
+        lorem.includes("amet") // Encontrar una palabra,
+        lorem.includes("Will") // Encontrar una palabra,
+        lorem // String original,
+        lorem.trim() // Quita espacios alrededor del texto,
+        lorem.split(" ") // Generar un arreglo, para agregar un separador,
         lorem.split(",")
-      );
+      ); */
 
-      /* **********     Template Strings     ********** */
+      /* **********     Template Strings     ********** 
 
       let name = "Will";
       let lastName = "BetId";
@@ -129,9 +129,9 @@
       ul3 += "<li>Invierno</li>";
       ul3 += "</ul>";
 
-      console.log(ul3);
+      console.log(ul3); */
 
-      /* **********     Números (Number)     ********** */
+      /* **********     Números (Number)     ********** 
 
       let an = 2;
       let b = new Number(1);
@@ -139,16 +139,16 @@
       let d = "5.6";
 
       console.log(a, b);
-      console.log(c.toFixed(1)); /* mostrar cierto número de decimales */
-      console.log(parseInt(c)); /* Solo devuelve la parte entera */
-      console.log(parseFloat(c)); /* mostrar decimales */
-      console.log(typeof c, typeof d); /* mostrar que tipo de datos es una variable */
-      console.log(a + b); /* Proceso de suma */
-      console.log(c + d); /* Proceso de concatenación */
-      console.log(c + parseInt(d)); /* Operación de suma con variable number y string */
-      console.log(c + parseFloat(d)); /* Operación de suma con variable number y string */
+      console.log(c.toFixed(1)); // mostrar cierto número de decimales
+      console.log(parseInt(c)); // Solo devuelve la parte entera
+      console.log(parseFloat(c)); // mostrar decimales
+      console.log(typeof c, typeof d); // mostrar que tipo de datos es una variable
+      console.log(a + b); // Proceso de suma
+      console.log(c + d); // Proceso de concatenación
+      console.log(c + parseInt(d)); // Operación de suma con variable number y string
+      console.log(c + parseFloat(d)); // Operación de suma con variable number y string
 
-      /* **********     Booleans     ********** */
+      /* **********     Booleans     **********
 
       let verdadero = true;
       let falso = false;
@@ -161,9 +161,9 @@
       console.log(0);
       console.log(-7);
       console.log("");
-      console.log(" ");
+      console.log(" "); */
 
-      /* **********     undefined, null & NaN     ********** */
+      /* **********     undefined, null & NaN     **********
       //undefined indica que no se ha inicializado una variable y que el valor está ausente
       let indefinida;
       console.log(indefinida);
@@ -173,9 +173,9 @@
       console.log(null);
 
       let noEsUnNumero = "hola" * 3.7;
-      console.log(noEsUnNumero);
+      console.log(noEsUnNumero); */
 
-      /* **********     Funciones     ********** */
+      /* **********     Funciones     **********
 
       // Función declarada
 
@@ -203,7 +203,7 @@
       console.log(valorFuncion);
 
       function saludar(nombre = "Desconocido", edad = 0) {
-        /* Parametros de una función (Valores que recibe porque los usará internamente para algo) */
+        // Parametros de una función (Valores que recibe porque los usará internamente para algo)
         console.log(`Hola, mi nombre es ${nombre} y tengo ${edad} años`);
       }
 
@@ -227,9 +227,9 @@
         );
       };
 
-      funcionExpresada();
+      funcionExpresada(); */
 
-      /* **********     Arreglos (Arrays)     ********** */
+      /* **********     Arreglos (Arrays)     **********
 
       const w = [];
       const z = [1, true, "Hola", ["A", "B", "C", [1, 2, 3]]];
@@ -265,9 +265,9 @@
 
       colors.forEach(function (el, index) {
         console.log(`<li id="${index}">${el}</li>`);
-      });
+      }); */
 
-      /* **********     Objetos (Objects)     ********** */
+      /* **********     Objetos (Objects)     **********
 
       let e = new String("Hola");
       console.log(e);
@@ -319,7 +319,15 @@
       console.log(Object.keys(user)); // Listar las llaves del objeto
       console.log(Object.values(user)); // Listar los valores de las llaves del objeto
       console.log(user.hasOwnProperty("nombr")); // Saber si un objeto tiene una propiedad
-      console.log(user.hasOwnProperty("nacimiento"));
+      console.log(user.hasOwnProperty("nacimiento")); */
+
+      /* **********     Tipos de Operadores     ********** */
+
+      let f = 5 + (5 - 10) * 3;
+      let modulo = 5 % 2;
+
+      console.log(f);
+      console.log(modulo);
     </script>
   </body>
 </html>
