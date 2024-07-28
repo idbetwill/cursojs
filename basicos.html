@@ -373,7 +373,7 @@
       console.log(9 === 9 && "9" === 9);
       console.log(9 === 9 && "9" === "9"); */
 
-      /* **********     Condicionales     ********** 
+      /* **********     Condicionales     **********
 
       let edad = 17;
 
@@ -454,7 +454,7 @@
           console.log("El día no existe");
           break;
       } */
-      /* **********     Ciclos/Bucles:Loops     ********** */
+      /* **********     Ciclos/Bucles:Loops     **********
 
       let contador = 10;
 
@@ -502,6 +502,30 @@
 
       for (const character of gh) {
         console.log(character);
+      } */
+
+      /* **********     Manejo de errores     ********** */
+
+      try {
+        console.log("En el Try se agrega el código a evaluar");
+        noExiste;
+      } catch (error) {
+        console.log("Segundo mensaje en el try");
+        console.log("Catch, captura cualquier error surgido o lanzado en el try");
+        console.log(error);
+      } finally {
+        console.log("El bloque finally se ejecutará siempre al final de unbloque try-catch");
+      }
+
+      try {
+        let numero = 100;
+        if (isNaN(numero)) {
+          throw new Error("El caracter introducido no es un número");
+        }
+        console.log(numero * numero);
+      } catch (error) {
+        console.log(`Se produjo el siguiente error: ${error}`);
+      } finally {
       }
     </script>
   </body>
