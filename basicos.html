@@ -528,7 +528,7 @@
       } finally {
       } */
 
-      /* **********     Break & Continue     ********** */
+      /* **********     Break & Continue     ********** 
 
       const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 
@@ -544,7 +544,32 @@
           continue;
         }
         console.log(numeros[i]);
-      }
+      } */
+
+      /* **********     Destructuración     ********** */
+
+      const numeros = [1, 2, 3];
+
+      // Sin destructuración
+      let uno = numeros[0];
+      dos = numeros[1];
+      tres = numeros[2];
+
+      console.log(uno, dos, tres);
+
+      // con destructuración
+      const [one, two, three] = numeros;
+      console.log(one, two, three);
+
+      const person = {
+        nombre: "Gu",
+        apellido: "ji",
+        edad: 67,
+      };
+
+      const { nombre, apellido, edad } = person;
+
+      console.log(nombre, apellido, edad);
     </script>
   </body>
 </html>
