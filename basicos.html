@@ -504,7 +504,7 @@
         console.log(character);
       } */
 
-      /* **********     Estructura de control para Manejo de errores     ********** 
+      /* **********     Estructura de control para Manejo de errores     **********
 
       try {
         console.log("En el Try se agrega el código a evaluar");
@@ -528,7 +528,7 @@
       } finally {
       } */
 
-      /* **********     Break & Continue     ********** 
+      /* **********     Break & Continue     **********
 
       const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 
@@ -571,7 +571,7 @@
 
       console.log(nombre, apellido, edad); */
 
-      /* **********     Objetos literales     ********** 
+      /* **********     Objetos literales     **********
 
       let nombre = "kEnai";
       edad = 7;
@@ -594,11 +594,11 @@
         ladrar() {
           console.log("Wau Wau!!");
         },
-      }; 
-      
+      };
+
       perro.ladrar(); */
 
-      /* **********     Parámetros REST & Spread Operator     ********** */
+      /* **********     Parámetros REST & Spread Operator     **********
 
       function sumar(a, b, ...c) {
         let resultado = a + b;
@@ -626,7 +626,55 @@
 
       const arr3 = [...arr1, ...arr2];
 
-      console.log(arr3);
+      console.log(arr3); */
+
+      /* **********     Arrows Functions     ********** */
+
+      const saludo = () => console.log("Hola");
+      saludo();
+
+      const saludar = (nombre) => console.log(`Hola ${nombre}`);
+      saludar("irma");
+
+      const saluda = (nombr) => console.log(`Hola ${nombr}`);
+      saluda("irma");
+
+      const sumar = function (a, b) {
+        return a + b;
+      };
+
+      console.log(sumar(8, 9));
+
+      const suma = (f, x) => f + x;
+
+      console.log(sumar(9, 9));
+
+      const funcionDVLineas = () => {
+        console.log("Uno");
+        console.log("Dos");
+        console.log("Tres");
+      };
+
+      funcionDVLineas();
+
+      const numeros = [1, 2, 3, 4, 5];
+
+      numeros.forEach((el, index) => console.log(`${el} esta en lo posición ${index}`));
+
+      function dog() {
+        console.log(this);
+      }
+
+      dog();
+
+      const perro = {
+        nombre: "Hachiko",
+        ladrar() {
+          console.log(this);
+        },
+      };
+
+      perro.ladrar();
     </script>
   </body>
 </html>
