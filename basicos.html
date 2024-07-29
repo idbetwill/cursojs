@@ -546,7 +546,7 @@
         console.log(numeros[i]);
       } */
 
-      /* **********     Destructuración     ********** */
+      /* **********     Destructuración     **********
 
       const numeros = [1, 2, 3];
 
@@ -569,7 +569,34 @@
 
       const { nombre, apellido, edad } = person;
 
-      console.log(nombre, apellido, edad);
+      console.log(nombre, apellido, edad); */
+
+      /* **********     Objetos literales     ********** */
+
+      let nombre = "kEnai";
+      edad = 7;
+
+      const dog = {
+        nombre: nombre,
+        edad: edad,
+        ladrar: function () {
+          console.log("Wau Wau!!");
+        },
+      };
+
+      console.log(dog);
+      dog.ladrar();
+
+      const perro = {
+        nombre,
+        edad,
+        raza: "Criollo",
+        ladrar() {
+          console.log("Wau Wau!!");
+        },
+      };
+
+      perro.ladrar();
     </script>
   </body>
 </html>
