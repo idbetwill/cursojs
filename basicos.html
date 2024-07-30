@@ -727,7 +727,7 @@
       lolaBunny.sonar();
       lolaBunny.saludar(); */
 
-      /* **********     Herencia Prototipica     ********** */
+      /* **********     Herencia Prototipica     ********** 
 
       function Animales(nombre, genero) {
         this.nombre = nombre;
@@ -775,7 +775,49 @@
       snoopy.saludar();
       snoopy.ladrar();
       lolaBunny.sonar();
-      lolaBunny.saludar();
+      lolaBunny.saludar(); */
+
+      /* **********     Clases y herencia     ********** */
+
+      class Animales {
+        constructor(nombre, genero) {
+          this.nombre = nombre;
+          this.genero = genero;
+        }
+
+        sonar() {
+          console.log("Hago sonidos, porque estoy vivo");
+        }
+
+        saludar() {
+          console.log(`Hola me llamo ${this.nombre}`);
+        }
+      }
+
+      class Perro extends Animales {
+        constructor(nombre, genero, tamanio) {
+          // Manda a llamar el constructor de la clase padre
+          super(nombre, genero);
+          this.tamanio = tamanio;
+        }
+        sonar() {
+          console.log("Soy un perro y mi sonido es un ladrido");
+        }
+        ladrar() {
+          console.log("Wau Wau!!!");
+        }
+      }
+
+      const mimi = new Animales("Mimi", "Hembra"),
+        scooby = new Perro("Scooby", "Macho", "Gigante");
+
+      console.log(mimi);
+      mimi.saludar();
+      mimi.sonar();
+      console.log(scooby);
+      scooby.saludar();
+      scooby.sonar();
+      scooby.ladrar();
     </script>
   </body>
 </html>
