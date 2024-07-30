@@ -676,7 +676,7 @@
 
         perro.ladrar(); */
 
-      /* **********     Prototipos     ********** */
+      /* **********     Prototipos     ********** 
 
       const animal = {
         nombre: "Snoopy",
@@ -725,9 +725,57 @@
       snoopy.sonar();
       snoopy.saludar();
       lolaBunny.sonar();
-      lolaBunny.saludar();
+      lolaBunny.saludar(); */
 
       /* **********     Herencia Prototipica     ********** */
+
+      function Animales(nombre, genero) {
+        this.nombre = nombre;
+        this.genero = genero;
+      }
+
+      Animales.prototype.sonar = function () {
+        console.log("Hago sonidos, porque estoy vivo");
+      };
+
+      Animales.prototype.saludar = function () {
+        console.log(`Hola me llamo ${this.nombre}`);
+      };
+
+      function Perro(nombre, genero, tamanio) {
+        this.super = Animales;
+        this.super(nombre, genero);
+        this.tamanio = tamanio;
+      }
+
+      // Perro está heredando de Animales
+      Perro.prototype = new Animales();
+      Perro.prototype.constructor = Perro;
+
+      // Sobreescritura de métodos del prototipo padre en el hijo
+      Perro.prototype.sonar = function () {
+        console.log("Soy un perro y mi sonido es un ladrido");
+      };
+
+      Perro.prototype.ladrar = function () {
+        console.log("Wau Wau!");
+      };
+
+      const snoopy = new Perro("Snoopy", "Macho", "Mediano");
+      lolaBunny = new Animales("Lola Bunny", "Hembra");
+      susy = new Animales("Susy", "Hembra");
+      hachiko = new Animales("Hachiko", "Macho");
+
+      console.log(snoopy);
+      console.log(lolaBunny);
+      console.log(susy);
+      console.log(hachiko);
+
+      snoopy.sonar();
+      snoopy.saludar();
+      snoopy.ladrar();
+      lolaBunny.sonar();
+      lolaBunny.saludar();
     </script>
   </body>
 </html>
