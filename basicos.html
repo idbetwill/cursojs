@@ -777,7 +777,7 @@
       lolaBunny.sonar();
       lolaBunny.saludar(); */
 
-      /* **********     Clases y herencia     ********** */
+      /* **********     Clases y herencia     ********** 
 
       class Animales {
         constructor(nombre, genero) {
@@ -817,7 +817,68 @@
       console.log(scooby);
       scooby.saludar();
       scooby.sonar();
+      scooby.ladrar(); */
+
+      /* **********     Métodos estáticos. getters y setters     ********** */
+
+      class Animales {
+        constructor(nombre, genero) {
+          this.nombre = nombre;
+          this.genero = genero;
+        }
+
+        sonar() {
+          console.log("Hago sonidos, porque estoy vivo");
+        }
+
+        saludar() {
+          console.log(`Hola me llamo ${this.nombre}`);
+        }
+      }
+
+      class Perro extends Animales {
+        constructor(nombre, genero, tamanio) {
+          super(nombre, genero);
+          this.tamanio = tamanio;
+          this.raza = null;
+        }
+        sonar() {
+          console.log("Soy un perro y mi sonido es un ladrido");
+        }
+        ladrar() {
+          console.log("Wau Wau!!!");
+        }
+        // Método estático
+        static queEres() {
+          console.log(
+            "Los perros sin animales mamiferos que pertenecen a la familia de los caninos. Somos considerados los mejores amigos del hombre."
+          );
+        }
+
+        // Getters y setters (Métodos obtenedores)
+        get getRaza() {
+          return this.raza;
+        }
+
+        set setRaza(raza) {
+          this.raza = raza;
+        }
+      }
+
+      const mimi = new Animales("Mimi", "Hembra"),
+        scooby = new Perro("Scooby", "Macho", "Gigante");
+
+      console.log(mimi);
+      mimi.saludar();
+      mimi.sonar();
+      console.log(scooby);
+      Perro.queEres();
+      scooby.saludar();
+      scooby.sonar();
       scooby.ladrar();
+      console.log(scooby.getRaza);
+      scooby.setRaza = "Gran Danés";
+      console.log(scooby.getRaza);
     </script>
   </body>
 </html>
