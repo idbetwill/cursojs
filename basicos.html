@@ -819,7 +819,7 @@
       scooby.sonar();
       scooby.ladrar(); */
 
-      /* **********     Métodos estáticos. getters y setters     ********** */
+      /* **********     Métodos estáticos. getters y setters     ********** 
 
       class Animales {
         constructor(nombre, genero) {
@@ -878,7 +878,96 @@
       scooby.ladrar();
       console.log(scooby.getRaza);
       scooby.setRaza = "Gran Danés";
-      console.log(scooby.getRaza);
+      console.log(scooby.getRaza); */
+
+      /* **********     Objeto console     ********** 
+
+      console.log(console);
+      console.error("Esto es un error");
+      console.warn("Esto es un aviso");
+      console.info("Esto es un mensaje informativo");
+      console.log("Registro de lo que ha pasado en la aplicación");
+
+      let nombre = "Wi",
+        apellido = "Bt",
+        edad = 4;
+
+      console.log(nombre);
+      console.log(apellido);
+      console.log(edad);
+      console.log(nombre, apellido, edad);
+      console.log(`Hola mi nombre es ${nombre} ${apellido} y tengo ${edad} años`);
+      console.log(`Hola mi nombre es %s %s y tengo %d años`, nombre, apellido, edad);
+      console.clear();
+      console.log(window);
+      console.log(document);
+      console.dir(window);
+      console.dir(document);
+      console.clear();
+
+      console.group("Esto es un grupo");
+      console.log("Elemento 1");
+      console.log("Elemento 2");
+      console.log("Elemento 3");
+      console.log("Elemento 4");
+      console.log("Elemento 5");
+      console.groupEnd();
+
+      console.groupCollapsed("Esto es un grupo");
+      console.log("Elemento 1");
+      console.log("Elemento 2");
+      console.log("Elemento 3");
+      console.log("Elemento 4");
+      console.log("Elemento 5");
+      console.groupEnd();
+      console.clear();
+
+      console.log(console);
+      console.table(Object.entries(console).sort());
+
+      const numeros = [1, 2, 3, 4, 5],
+        vocales = ["a", "e", "i", "o", "u"];
+
+      console.table(numeros);
+      console.table(vocales);
+
+      const perro = {
+        nombre: "Bunny",
+        raza: "Boxer",
+        color: "Café",
+      };
+
+      console.table(perro);
+
+      console.clear();
+
+      console.time("Cuanto tiempo tarde mi código");
+      const arreglo = Array(1000000);
+
+      for (let i = 0; i < arreglo.length; i++) {
+        arreglo[i] = i;
+      }
+
+      console.timeEnd("Cuanto tiempo tarde mi código");
+
+      // console.log(arreglo);
+
+      console.clear();
+
+      for (let i = 0; i < 100; i++) {
+        console.count("Código For");
+        console.log(i);
+      }
+
+      console.clear();
+
+      let x = 3,
+        y = 2,
+        pruebaXY = "Se espera que X siempre sea menor que y";
+
+      console.assert(x < y, [x, y, pruebaXY]); */
+
+      /* **********     Objeto console     ********** */
     </script>
   </body>
 </html>
