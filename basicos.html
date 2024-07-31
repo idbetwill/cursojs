@@ -1081,6 +1081,39 @@
       console.log(expReg2.exec(paragraph)); */
 
       /* **********     Funciones anonimas autoejecutables     ********** */
+
+      (function () {
+        console.log("Mi primer IIFE");
+      })();
+
+      (function (d, w, c) {
+        console.log("Mi segunda IIFE");
+        console.log(d);
+        console.log(w);
+        c.log("Este es un console.log");
+      })(document, window, console);
+
+      // Formas de escribir las IIFE
+
+      //Clásica
+      (function () {
+        console.log("Versión Clásica");
+      })();
+
+      //La Crockford (JavaScript The God Parts)
+      (function () {
+        console.log("Versión Crockford");
+      })();
+
+      //Unaria
+      +(function () {
+        console.log("Versión Unaria");
+      })();
+
+      //Facebook
+      !(function () {
+        console.log("Versión Facebook");
+      })();
     </script>
   </body>
 </html>
