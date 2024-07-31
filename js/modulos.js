@@ -12,3 +12,5 @@ saludar();
 
 let saludo = new Saludar();
 saludo;
+
+// import React,{Component} from 'React';
