@@ -1014,6 +1014,42 @@
       console.log(Math.round(Math.random() * 1000)); */
 
       /* **********     Operador de Cortocircuito     ********** */
+
+      //Cortocircuito OR
+
+      function saludar(nombre = "Desconocido") {
+        nombre = nombre || "Desconocido";
+        console.log(`Hola ${nombre}`);
+      }
+
+      saludar("W");
+      saludar();
+
+      console.log("Cadena" || "Valor de la derecha");
+      console.log(19 || "Valor de la derecha");
+      console.log(true || "Valor de la derecha");
+      console.log([] || "Valor de la derecha");
+      console.log({} || "Valor de la derecha");
+      console.log(false || "Valor de la derecha");
+      console.log(null || "Valor de la derecha");
+      console.log(undefined || "Valor de la derecha");
+      console.log("" || "Valor de la derecha");
+      console.log(-2 || "Valor de la derecha");
+      console.log(0 || "Valor de la derecha");
+
+      //Cortocircuito NAD
+
+      console.log("Cadena" && "Valor de la derecha");
+      console.log(19 && "Valor de la derecha");
+      console.log(true && "Valor de la derecha");
+      console.log([] && "Valor de la derecha");
+      console.log({} && "Valor de la derecha");
+      console.log(false && "Valor de la derecha");
+      console.log(null && "Valor de la derecha");
+      console.log(undefined && "Valor de la derecha");
+      console.log("" && "Valor de la derecha");
+      console.log(-2 && "Valor de la derecha");
+      console.log(0 && "Valor de la derecha");
     </script>
   </body>
 </html>
