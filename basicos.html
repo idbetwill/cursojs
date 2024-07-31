@@ -1013,7 +1013,7 @@
       console.log(Math.random() * 1000);
       console.log(Math.round(Math.random() * 1000)); */
 
-      /* **********     Operador de Cortocircuito     ********** */
+      /* **********     Operador de Cortocircuito     ********** 
 
       //Cortocircuito OR
 
@@ -1049,7 +1049,23 @@
       console.log(undefined && "Valor de la derecha");
       console.log("" && "Valor de la derecha");
       console.log(-2 && "Valor de la derecha");
-      console.log(0 && "Valor de la derecha");
+      console.log(0 && "Valor de la derecha"); */
+
+      /* **********     Alert, confirm y prompt     ********** */
+
+      console.log(window);
+
+      //window.alert("Esto es una alerta");
+      //window.confirm("Esto es una confirmación");
+      //window.prompt("Esto es un aviso");
+
+      let alerta = alert("Esto es una alerta"),
+        confirmacion = confirm("Esto es una Confirmación"),
+        aviso = prompt("Esto es un aviso");
+
+      console.log(alerta);
+      console.log(confirmacion);
+      console.log(aviso);
     </script>
   </body>
 </html>
