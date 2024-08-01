@@ -49,3 +49,5 @@ function convertidor(stringToArray, separador) {
 }
 
 console.log(convertidor(stringToArray, " "));
+
+/* **********     Ejercicio 4     ********** */
