@@ -5,7 +5,6 @@
 
 /* **********     Ejercicio 1     ********** */
 
-let string = new String("Hola Mundo");
 let object = {
   nombre: "Pedro",
   apellido: "Gonzalez",
@@ -16,17 +15,15 @@ let array = ["a", "e", "i", "o", "u"];
 
 let number = 3226789988;
 
-let contarString = string.length;
-
-function contador() {
-  if (" " || contarString) {
-    console.log(contarString);
+function contador(text) {
+  if (typeof text === "string") {
+    return text.length;
   } else {
-    console.log("Esta cadena no está definida o es inválida");
+    console.log("Esta cadena no está definida o no es válida");
   }
 }
 
-contador();
+console.log(contador("text"));
 
 /* **********     Ejercicio 2     ********** */
 
@@ -51,3 +48,9 @@ function convertidor(stringToArray, separador) {
 console.log(convertidor(stringToArray, " "));
 
 /* **********     Ejercicio 4     ********** */
+
+function repetidor(textR) {
+  return textR.repeat(3);
+}
+
+console.log(repetidor("Hola Mundo "));
