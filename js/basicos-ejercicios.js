@@ -3,6 +3,7 @@
 3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].
 4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.*/
 
+/*
 // **********     Ejercicio 1     **********
 
 console.log("**********     Ejercicio 1     **********");
@@ -65,7 +66,7 @@ cutText();
 cutText("Hola Mundo");
 cutText("", 5);
 
-/* **********     Ejercicio 3     ********** */
+// **********     Ejercicio 3     **********
 
 console.log("**********     Ejercicio 3     **********");
 
@@ -95,7 +96,7 @@ string2Array();
 string2Array("Hola Mundo");
 string2Array("", "-");
 
-/* **********     Ejercicio 4     ********** */
+// **********     Ejercicio 4     **********
 
 console.log("**********     Ejercicio 4     **********");
 
@@ -121,10 +122,56 @@ repeatText("Hola Mundo", 0);
 repeatText("Hola Mundo", -4);
 repeatText("", -4);
 repeatText("Hola Mundo");
+*/
 
 /* 5) Programa una función que invierta las palabras de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá "odnuM aloH".
 6) Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.
 7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.
 8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5. */
 
-/* **********     Ejercicio 5     ********** */
+// **********     Ejercicio 5     **********
+
+// Hay diferentes formas de invertir un texto en JS https://www.freecodecamp.org/espanol/news/tres-formas-de-invertir-una-cadena-en-javascript/
+
+/* const invest = (investText) => {
+  let invested = "";
+  for (let i = investText.length - 1; i >= 0; i--) {
+    invested += investText[i];
+  }
+  return invested;
+};
+console.info(invest("Hola")); */
+
+// **********     Ejercicio 6     **********
+
+const countWord = (text, word) => {
+  const regex = new RegExp(`\\b${word}\\b`, "ig");
+  const found = text.match(regex);
+  return found ? found.length : 0;
+};
+
+const text2 = "Hola mundo adiós mundo";
+const word = "Mundo";
+const result = countWord(text2, word);
+
+console.info(`La palabra ${word} se repite ${result}`);
+
+// **********     Ejercicio 7     **********
+
+const validPalim = (validword) => {
+  const conver = validword.replace(/\s+/g, "").toLowerCase();
+  const inverW = conver.split("").reverse().join("");
+
+  return conver === inverW;
+};
+
+console.info(validPalim("A mama Roma le aviva el amor a mama"));
+
+// **********     Ejercicio 8     **********
+
+const delWord = (string = "") =>
+  !string
+    ? console.warn("No agregó ningún texto para eliminar")
+    : console.info(string.replace(/,/g, ""));
+
+delWord("Hola, voy, a elimnar, las, comas");
