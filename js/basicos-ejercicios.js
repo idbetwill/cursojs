@@ -29,3 +29,23 @@ function contador() {
 contador();
 
 /* **********     Ejercicio 2     ********** */
+
+let string2 = new String("Hola Mundo");
+
+function buscador(string2, num) {
+  return string2.substring(0, num);
+}
+
+console.log(buscador(string2, 5));
+
+/* **********     Ejercicio 3     ********** */
+
+let stringToArray = new String(
+  "Hola mundo, soy una cadena de texto (string) que se conviritó en Array"
+);
+
+function convertidor(stringToArray, separador) {
+  return stringToArray.split(separador);
+}
+
+console.log(convertidor(stringToArray, " "));
