@@ -133,6 +133,8 @@ repeatText("Hola Mundo");
 
 // Hay diferentes formas de invertir un texto en JS https://www.freecodecamp.org/espanol/news/tres-formas-de-invertir-una-cadena-en-javascript/
 
+console.log("**********     Ejercicio 5     **********");
+
 const invest = (investText) => {
   let invested = "";
   for (let i = investText.length - 1; i >= 0; i--) {
@@ -153,6 +155,7 @@ invest2("Hola Mundo");
 invest2();
 
 // **********     Ejercicio 6     **********
+console.log("**********     Ejercicio 6     **********");
 
 const countWord = (text, word) => {
   const regex = new RegExp(`\\b${word}\\b`, "ig");
@@ -165,6 +168,8 @@ const word = "Mundo";
 const result = countWord(text2, word);
 
 console.info(`La palabra ${word} se repite ${result}`);
+
+// **********     Solución tutor ejercicio 6     **********
 
 // **********     Ejercicio 7     **********
 
