@@ -273,3 +273,19 @@ const numRandom = (limitMin = undefined, limitMax = undefined) => {
 };
 
 numRandom(501, 600);
+
+// **********     Ejercicio 10     **********
+console.log("**********     Ejercicio 10     **********");
+
+const capicua = (num = "") => {
+  if (!num) return console.warn("No ingresaste un número");
+  if (num.toString().length === 1) return console.warn("No puede ingresar números de 1 dígito");
+  let strNum = num.toString();
+  let converNum = strNum.split("").reverse().join("");
+
+  return strNum === converNum
+    ? console.info(`La palabra "${strNum}" si es un palíndromo "${converNum}"`)
+    : console.info(`La palabra "${strNum}" no es palíndromo "${converNum}"`);
+};
+
+capicua(2002);
