@@ -172,8 +172,8 @@ console.info(`La palabra ${word} se repite ${result}`);
 // **********     Solución con condicionales if ejercicio 6     **********
 
 const textInString = (stringText, wordEv) => {
-  if (!stringText) return console.warn();
-  if (!wordEv) return console.warn();
+  if (!stringText) return console.warn("No ingresaste una cadena de texto");
+  if (!wordEv) return console.warn("No ingresaste la palabra a buscar");
   const regex2 = new RegExp(`\\b${wordEv}\\b`, "ig");
   const found2 = stringText.match(regex2);
   return found2 ? found2.length : 0;
@@ -188,8 +188,8 @@ console.info(`La palabra ${wordEv} se repite ${result2}`);
 // **********     Solución tutor ejercicio 6 (Solución con Bucle: While)     **********
 
 const textToString = (stringText2, wordEv2) => {
-  if (!stringText2) return console.warn();
-  if (!wordEv2) return console.warn();
+  if (!stringText2) return console.warn("No ingresaste una cadena de texto");
+  if (!wordEv2) return console.warn("No ingresaste la palabra a buscar");
 
   let i = 0,
     counter = 0;
@@ -208,16 +208,23 @@ textToString("Hola mundo. Adiós, mundo", "mundo");
 
 // **********     Ejercicio 7     **********
 
-const validPalim = (validword) => {
-  const conver = validword.replace(/\s+/g, "").toLowerCase();
-  const inverW = conver.split("").reverse().join("");
+console.log("**********     Ejercicio 7     **********");
 
-  return conver === inverW;
+const validPalim = (validword) => {
+  if (!validword) return console.warn("No ingresaste una palabra o frase");
+  let conver = validword.replace(/\s+/g, "").toLowerCase();
+  let inverW = conver.split("").reverse().join("");
+
+  return conver === inverW
+    ? console.info(`La palabra ${conver} si es un palíndromo ${inverW}`)
+    : console.info(`La palabra ${conver} no es palíndromo ${inverW}`);
 };
 
-console.info(validPalim("A mama Roma le aviva el amor a mama"));
+validPalim("A mama Roma le aviva el amor a mama");
 
 // **********     Ejercicio 8     **********
+
+console.log("**********     Ejercicio 8     **********");
 
 const delWord = (string = "") =>
   !string
