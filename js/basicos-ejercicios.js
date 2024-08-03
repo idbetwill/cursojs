@@ -171,6 +171,32 @@ console.info(`La palabra ${word} se repite ${result}`);
 
 // **********     Solución tutor ejercicio 6     **********
 
+const textInString = (stringText, wordEv) => {
+  if (!stringText) return console.warn();
+  if (!wordEv) return console.warn();
+  const regex2 = new RegExp(`\\b${wordEv}\\b`, "ig");
+  const found2 = stringText.match(regex2);
+  return found2 ? found2.length : 0;
+};
+
+const stringText = "Hola mundo adiós mundo";
+const wordEv = "Mundo";
+const result2 = textInString("Hola mundo adión mundo", "mundo");
+
+console.info(`La palabra ${wordEv} se repite ${result2}`);
+
+// **********     Solución tutor ejercicio 6 (Solución con Bucle: While)     **********
+
+const textToString = (stringText, wordEv) => {
+  if (!stringText) return console.warn();
+  if (!wordEv) return console.warn();
+  const regex2 = new RegExp(`\\b${wordEv}\\b`, "ig");
+  const found2 = stringText.match(regex2);
+  return found2 ? found2.length : 0;
+};
+
+console.info(`La palabra ${wordEv} se repite ${result2}`);
+
 // **********     Ejercicio 7     **********
 
 const validPalim = (validword) => {
