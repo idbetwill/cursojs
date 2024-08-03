@@ -247,6 +247,18 @@ const delWord = (string = "") =>
 
 delWord("Hola, voy, a elimnar, las, comas");
 
+// **********     Solución tutor ejercicio 8     **********
+
+const deletW = (paragraph = "", select = "") => {
+  !paragraph
+    ? console.warn("No ingresó ninguna frase")
+    : !select
+    ? console.warn("No ingresó patrón de caracteres para eliminar")
+    : console.info(paragraph.replace(new RegExp(select, "ig"), ""));
+};
+
+deletW("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz");
+
 /*9) Programa una función que obtenga un numero aleatorio entre 501 y 600.
 10) Programa una función que reciba un número y evalúe si es capicúa o no (que se lee igual en un sentido que en otro), pe. miFuncion(2002) devolverá true.
 11) Programa una función que calcule el factorial de un número (El factorial de un entero positivo n, se define como el producto de todos los números enteros positivos desde 1 hasta n), pe. miFuncion(5) devolverá 120.*/
