@@ -128,7 +128,7 @@ repeatText("Hola Mundo");
 6) Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.
 7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.
 8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5. */
-
+/*
 // **********     Ejercicio 5     **********
 
 // Hay diferentes formas de invertir un texto en JS https://www.freecodecamp.org/espanol/news/tres-formas-de-invertir-una-cadena-en-javascript/
@@ -257,8 +257,19 @@ const deletW = (paragraph = "", select = "") => {
     : console.info(paragraph.replace(new RegExp(select, "ig"), ""));
 };
 
-deletW("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz");
+deletW("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz"); */
 
 /*9) Programa una función que obtenga un numero aleatorio entre 501 y 600.
 10) Programa una función que reciba un número y evalúe si es capicúa o no (que se lee igual en un sentido que en otro), pe. miFuncion(2002) devolverá true.
 11) Programa una función que calcule el factorial de un número (El factorial de un entero positivo n, se define como el producto de todos los números enteros positivos desde 1 hasta n), pe. miFuncion(5) devolverá 120.*/
+
+// **********     Ejercicio 9     **********
+console.log("**********     Ejercicio 9     **********");
+
+const numRandom = (limitMin = undefined, limitMax = undefined) => {
+  if (!limitMin) console.warn("No ingresó el límite Mínimo o no es un caracter válido");
+  if (!limitMax) console.warn("No ingresó el límite Máximo o no es un caracter válido");
+  return console.info(Math.round(Math.random() * (limitMax - limitMin) + limitMin));
+};
+
+numRandom(501, 600);
