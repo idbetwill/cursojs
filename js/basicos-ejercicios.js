@@ -216,11 +216,25 @@ const validPalim = (validword) => {
   let inverW = conver.split("").reverse().join("");
 
   return conver === inverW
-    ? console.info(`La palabra ${conver} si es un palíndromo ${inverW}`)
-    : console.info(`La palabra ${conver} no es palíndromo ${inverW}`);
+    ? console.info(`La palabra "${conver}" si es un palíndromo "${inverW}"`)
+    : console.info(`La palabra "${conver}" no es palíndromo "${inverW}"`);
 };
 
 validPalim("A mama Roma le aviva el amor a mama");
+
+// **********     Solución tutor ejercicio 7     **********
+
+const palindromo = (word) => {
+  if (!word) return console.warn("No ingresaste una palabra o frase");
+  word = word.toLowerCase();
+  let convert = word.split().reverse().join();
+
+  return word === convert
+    ? console.info(`La palabra "${word}" si es un palíndromo "${convert}"`)
+    : console.info(`La palabra "${word}" no es palíndromo "${convert}"`);
+};
+
+palindromo("A mama Roma le aviva el amor a mama");
 
 // **********     Ejercicio 8     **********
 
