@@ -169,7 +169,7 @@ const result = countWord(text2, word);
 
 console.info(`La palabra ${word} se repite ${result}`);
 
-// **********     Solución tutor ejercicio 6     **********
+// **********     Solución con condicionales if ejercicio 6     **********
 
 const textInString = (stringText, wordEv) => {
   if (!stringText) return console.warn();
@@ -187,15 +187,24 @@ console.info(`La palabra ${wordEv} se repite ${result2}`);
 
 // **********     Solución tutor ejercicio 6 (Solución con Bucle: While)     **********
 
-const textToString = (stringText, wordEv) => {
-  if (!stringText) return console.warn();
-  if (!wordEv) return console.warn();
-  const regex2 = new RegExp(`\\b${wordEv}\\b`, "ig");
-  const found2 = stringText.match(regex2);
-  return found2 ? found2.length : 0;
+const textToString = (stringText2, wordEv2) => {
+  if (!stringText2) return console.warn();
+  if (!wordEv2) return console.warn();
+
+  let i = 0,
+    counter = 0;
+
+  while (i !== -1) {
+    i = stringText2.indexOf(wordEv2, i);
+    if (i !== -1) {
+      i++;
+      counter++;
+    }
+  }
+  return console.info(`La palabra ${wordEv2} se repite ${counter}`);
 };
 
-console.info(`La palabra ${wordEv} se repite ${result2}`);
+textToString("Hola mundo. Adiós, mundo", "mundo");
 
 // **********     Ejercicio 7     **********
 
