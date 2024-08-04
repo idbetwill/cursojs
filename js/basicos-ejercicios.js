@@ -305,7 +305,7 @@ const factorial = (x) => {
 
 factorial(5);
 
-// Usando método recursivo+
+// Usando método recursivo
 
 const factorial2 = (f) => {
   if (f < 0) console.warn("No se puede calclular el factorial de un número negativo");
@@ -314,3 +314,7 @@ const factorial2 = (f) => {
 };
 
 console.info(factorial2(5));
+
+/* 12) Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true.
+13) Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar.
+14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F. */
