@@ -293,8 +293,9 @@ capicua(2002);
 // **********     Ejercicio 11     **********
 console.log("**********     Ejercicio 11     **********");
 
+// Usando método iterativo
 const factorial = (x) => {
-  if (x < 0) console.warn("No se puede calclular el factorial de un ");
+  if (x < 0) console.warn("No se puede calclular el factorial de un número negativo");
   let result = 1;
   for (let i = 1; i <= x; i++) {
     result *= i;
@@ -303,3 +304,13 @@ const factorial = (x) => {
 };
 
 factorial(5);
+
+// Usando método recursivo+
+
+const factorial2 = (f) => {
+  if (f < 0) console.warn("No se puede calclular el factorial de un número negativo");
+  if (f === 0 || f === 1) return 1;
+  return f * factorial2(f - 1);
+};
+
+console.info(factorial2(5));
