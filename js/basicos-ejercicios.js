@@ -289,3 +289,17 @@ const capicua = (num = "") => {
 };
 
 capicua(2002);
+
+// **********     Ejercicio 11     **********
+console.log("**********     Ejercicio 11     **********");
+
+const factorial = (x) => {
+  if (x < 0) console.warn("No se puede calclular el factorial de un ");
+  let result = 1;
+  for (let i = 1; i <= x; i++) {
+    result *= i;
+  }
+  return console.info(result);
+};
+
+factorial(5);
