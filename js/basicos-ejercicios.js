@@ -345,3 +345,28 @@ numPar(2);
 numPar(3);
 numPar(4);
 numPar(5);
+
+// **********     Ejercicio 14     **********
+console.log("**********     Ejercicio 14     **********");
+
+const converTemp = (nTem = "", grade = "") => {
+  if (nTem === "" || grade === "") {
+    console.warn("No hay valor para convertir. Ingresa uno");
+    return;
+  }
+  if (isNaN(nTem)) {
+    console.warn("El valor de la temperatura debe ser un número");
+    return;
+  }
+  if (grade === "c") {
+    let resultConF = (nTem * 9) / 5 + 32;
+    return console.info(`${nTem}°C es ${resultConF}°F`);
+  }
+  if (grade === "f") {
+    let resultConC = ((nTem - 32) * 5) / 9;
+    return console.info(`${nTem}°C es ${resultConC}°F`);
+  }
+  console.warn("Grado desconocido. Ingresa 'c' para Celsius o 'f' para Fahrenheit");
+};
+
+converTemp(0, "c");
