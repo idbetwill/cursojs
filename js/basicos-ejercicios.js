@@ -319,6 +319,9 @@ console.info(factorial2(5));
 13) Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar.
 14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F. */
 
+// **********     Ejercicio 12     **********
+console.log("**********     Ejercicio 12     **********");
+
 const PrimNum = (numP) => {
   if (numP < 2) return console.warn("No ingresaste un valor válido");
   for (let i = 2; i <= Math.sqrt(numP); i++) {
