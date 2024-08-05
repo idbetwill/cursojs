@@ -331,3 +331,6 @@ const PrimNum = (numP) => {
 };
 
 PrimNum(7);
+
+// **********     Ejercicio 13     **********
+console.log("**********     Ejercicio 13     **********");
