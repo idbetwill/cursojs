@@ -279,13 +279,14 @@ console.log("**********     Ejercicio 10     **********");
 
 const capicua = (num = "") => {
   if (!num) return console.warn("No ingresaste un número");
+  if (typeof num !== "number") return console.error(`El valor ${num} ingresado, No es un número`);
   if (num.toString().length === 1) return console.warn("No puede ingresar números de 1 dígito");
   let strNum = num.toString();
   let converNum = strNum.split("").reverse().join("");
 
   return strNum === converNum
-    ? console.info(`La palabra "${strNum}" si es un palíndromo "${converNum}"`)
-    : console.info(`La palabra "${strNum}" no es palíndromo "${converNum}"`);
+    ? console.info(`La palabra "${strNum}" si es un capicúa "${converNum}"`)
+    : console.info(`La palabra "${strNum}" no es capicúa "${converNum}"`);
 };
 
 capicua(2002);
