@@ -334,3 +334,14 @@ PrimNum(7);
 
 // **********     Ejercicio 13     **********
 console.log("**********     Ejercicio 13     **********");
+
+const numPar = (numPa) => {
+  numPa % 2 === 0
+    ? console.info(`${numPa} Es un número Par`)
+    : console.info(`${numPa} Es un número Impar`);
+};
+
+numPar(2);
+numPar(3);
+numPar(4);
+numPar(5);
