@@ -263,6 +263,7 @@ deletW("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz"); */
 10) Programa una función que reciba un número y evalúe si es capicúa o no (que se lee igual en un sentido que en otro), pe. miFuncion(2002) devolverá true.
 11) Programa una función que calcule el factorial de un número (El factorial de un entero positivo n, se define como el producto de todos los números enteros positivos desde 1 hasta n), pe. miFuncion(5) devolverá 120.*/
 
+/*
 // **********     Ejercicio 9     **********
 console.log("**********     Ejercicio 9     **********");
 
@@ -295,13 +296,17 @@ capicua(2002);
 console.log("**********     Ejercicio 11     **********");
 
 // Usando método iterativo
-const factorial = (x) => {
-  if (x < 0) console.warn("No se puede calclular el factorial de un número negativo");
+const factorial = (x = "") => {
+  if (x === undefined) return console.warn("No ingresas un número");
+  if (typeof x !== "number") return console.error(`El valor ${x} ingresado, No es un número`);
+  if (x === 0) return console.error("El número no puede ser 0");
+  if (Math.sign(x) === -1) return console.error("El número no puede ser negativo");
+  if (x < 0) console.error(`El valor ${x} ingresado, No es un número positivo`);
   let result = 1;
-  for (let i = 1; i <= x; i++) {
+  for (let i = x; i > 1; i--) {
     result *= i;
   }
-  return console.info(result);
+  return console.info(`El factorial de ${x} es ${result}`);
 };
 
 factorial(5);
@@ -315,6 +320,7 @@ const factorial2 = (f) => {
 };
 
 console.info(factorial2(5));
+*/
 
 /* 12) Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true.
 13) Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar.
