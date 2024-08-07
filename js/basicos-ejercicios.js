@@ -331,6 +331,10 @@ console.log("**********     Ejercicio 12     **********");
 
 const PrimNum = (numP) => {
   if (numP < 2) return console.warn("No ingresaste un valor válido");
+  if (typeof numP !== "number") return console.log(`El valor ${numP} ingresado no es un número`);
+  if (numP === 0) return console.error("El número no puede ser 0");
+  if (numP === 1) return console.error("El número no puede ser 1");
+  if (Math.sign(numP) === -1) return console.error("El número no puede ser negativo");
   for (let i = 2; i <= Math.sqrt(numP); i++) {
     if (numP % i === 0) return console.warn(`Verificamos. ${numP} no es un número primo`);
   }
@@ -342,8 +346,11 @@ PrimNum(7);
 // **********     Ejercicio 13     **********
 console.log("**********     Ejercicio 13     **********");
 
-const numPar = (numPa) => {
-  numPa % 2 === 0
+const numPar = (numPa = undefined) => {
+  if (numPa === undefined) return console.warn("No ingresaste un valor válido");
+  if (typeof numPa !== "number") return console.warn(`El valor ${numPa} ingresado no es un número`);
+  if (Math.sign(numPa) === -1) return console.error("El número no puede ser negativo");
+  return numPa % 2 === 0
     ? console.info(`${numPa} Es un número Par`)
     : console.info(`${numPa} Es un número Impar`);
 };
@@ -356,22 +363,18 @@ numPar(5);
 // **********     Ejercicio 14     **********
 console.log("**********     Ejercicio 14     **********");
 
-const converTemp = (nTem = "", grade = "") => {
-  if (nTem === "" || grade === "") {
-    console.warn("No hay valor para convertir. Ingresa uno");
-    return;
-  }
-  if (isNaN(nTem)) {
-    console.warn("El valor de la temperatura debe ser un número");
-    return;
-  }
+const converTemp = (nTem = undefined, grade = undefined) => {
+  if (nTem === undefined || grade === undefined)
+    return console.warn("No hay valor para convertir. Ingresa uno");
+  if (typeof nTem !== "number" || typeof grade !== "string")
+    return console.warn("El valor ingresado no es un número o no es la unidad requerida (c o f)");
+  if (grade.length !== 1) return console.warn("Valor de unidad no reconocido debe ingresar c o f");
   if (grade === "c") {
-    let resultConF = (nTem * 9) / 5 + 32;
-    return console.info(`${nTem}°C es ${resultConF}°F`);
-  }
-  if (grade === "f") {
-    let resultConC = ((nTem - 32) * 5) / 9;
-    return console.info(`${nTem}°C es ${resultConC}°F`);
+    return console.info(`${nTem}°C es ${Math.round((nTem * 9) / 5 + 32)}°F`);
+  } else if (grade === "f") {
+    return console.info(`${nTem}°F es ${Math.round(((nTem - 32) * 5) / 9)}°C`);
+  } else {
+    return console.error("El tipo de grados a convertir no es válido");
   }
   console.warn("Grado desconocido. Ingresa 'c' para Celsius o 'f' para Fahrenheit");
 };
