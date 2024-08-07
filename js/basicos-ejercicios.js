@@ -428,7 +428,8 @@ converBin(4, "D");
 console.log("**********     Ejercicio 16     **********");
 
 const discount = (price = undefined, prcnt = undefined) => {
-  if (price === undefined || prcnt === undefined) return console.warn("");
+  if (price === undefined || prcnt === undefined)
+    return console.warn("No escribió ningún valor vuelva a intentar");
   if (typeof price !== "number" && typeof prcnt !== "number") {
     return console.warn("El valor ingresado no es un número");
   } else {
@@ -442,3 +443,20 @@ const discount = (price = undefined, prcnt = undefined) => {
 };
 
 discount(10000, 20);
+
+// **********     Ejercicio 17     **********
+console.log("**********     Ejercicio 17     **********");
+
+const calDate = (year = undefined, month = undefined, day = undefined) => {
+  if (year === undefined || month === undefined || day === undefined)
+    console.warn("No escribió fecha válida");
+  if (typeof year !== "number" && typeof year !== "number" && typeof day !== "number")
+    console.error("Debe ingresar el formato de fecha Año/Mes/Día en números");
+  if (Math.sign(year, month, day) === -1) return console.error("El número no puede ser negativo");
+  let dateToCal = new Date(year, month, day);
+  let actDate = new Date();
+  let yearsTrans = actDate.getFullYear() - dateToCal.getFullYear();
+  return console.info(yearsTrans);
+};
+
+calDate(1999, 7, 17);
