@@ -325,7 +325,7 @@ console.info(factorial2(5));
 /* 12) Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true.
 13) Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar.
 14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F. */
-
+/*
 // **********     Ejercicio 12     **********
 console.log("**********     Ejercicio 12     **********");
 
@@ -374,13 +374,49 @@ const converTemp = (nTem = undefined, grade = undefined) => {
   } else if (grade === "f") {
     return console.info(`${nTem}°F es ${Math.round(((nTem - 32) * 5) / 9)}°C`);
   } else {
-    return console.error("El tipo de grados a convertir no es válido");
+    console.error("Grado desconocido. Ingresa 'c' para Celsius o 'f' para Fahrenheit");
   }
-  console.warn("Grado desconocido. Ingresa 'c' para Celsius o 'f' para Fahrenheit");
 };
 
-converTemp(0, "c");
+converTemp(0, "c"); */
 
 /* 15) Programa una función para convertir números de base binaria a decimal y viceversa, pe. miFuncion(100,2) devolverá 4 base 10.
 16) Programa una función que devuelva el monto final después de aplicar un descuento a una cantidad dada, pe. miFuncion(1000, 20) devolverá 800.
 17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020). */
+
+const converBin = (numToCon = undefined, datem = undefined) => {
+  if (numToCon === undefined || datem === undefined) {
+    return console.warn("No hay valor para convertir. Ingresa uno.");
+  }
+  if (typeof numToCon !== "number" && typeof numToCon !== "string") {
+    return console.warn("El valor ingresado no es un número o una cadena binaria.");
+  }
+  if (typeof datem !== "string" || datem.length !== 1) {
+    return console.warn("Valor de unidad no reconocido, debe ingresar 'B' o 'D'.");
+  }
+
+  if (datem === "B") {
+    if (typeof numToCon === "string" && /^[01]+$/.test(numToCon)) {
+      let decimal = parseInt(numToCon, 2);
+      return console.info(`${numToCon} base 2 es igual a ${decimal} base 10`);
+    } else {
+      return console.error("Entrada no válida: debe ser una cadena binaria.");
+    }
+  }
+
+  if (datem === "D") {
+    if (typeof numToCon === "number" && numToCon >= 0 && Number.isInteger(numToCon)) {
+      let binario = numToCon.toString(2);
+      return console.info(`${numToCon} base 10 es igual a ${binario} base 2`);
+    } else {
+      return console.error("Número no válido: debe ser un entero no negativo.");
+    }
+  }
+
+  return console.error(
+    "Unidad no reconocida. Debe ser 'B' para binario a decimal o 'D' para decimal a binario."
+  );
+};
+
+converBin("100", "B");
+converBin(4, "D");
