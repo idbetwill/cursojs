@@ -384,6 +384,9 @@ converTemp(0, "c"); */
 16) Programa una función que devuelva el monto final después de aplicar un descuento a una cantidad dada, pe. miFuncion(1000, 20) devolverá 800.
 17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020). */
 
+// **********     Ejercicio 15     **********
+console.log("**********     Ejercicio 15     **********");
+
 const converBin = (numToCon = undefined, datem = undefined) => {
   if (numToCon === undefined || datem === undefined) {
     return console.warn("No hay valor para convertir. Ingresa uno.");
@@ -420,3 +423,22 @@ const converBin = (numToCon = undefined, datem = undefined) => {
 
 converBin("100", "B");
 converBin(4, "D");
+
+// **********     Ejercicio 16     **********
+console.log("**********     Ejercicio 16     **********");
+
+const discount = (price = undefined, prcnt = undefined) => {
+  if (price === undefined || prcnt === undefined) return console.warn("");
+  if (typeof price !== "number" && typeof prcnt !== "number") {
+    return console.warn("El valor ingresado no es un número");
+  } else {
+    let nwPrice = price * (1 - prcnt / 100);
+    console.info(
+      `El precio original del producto es $${price.toLocaleString(
+        "es-CO"
+      )}, con un descuento de ${prcnt}%. Ahora Pagas $${nwPrice.toLocaleString("es-CO")}`
+    );
+  }
+};
+
+discount(10000, 20);
