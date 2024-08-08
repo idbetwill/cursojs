@@ -456,7 +456,11 @@ const calDate = (year = undefined, month = undefined, day = undefined) => {
   let dateToCal = new Date(year, month, day);
   let actDate = new Date();
   let yearsTrans = actDate.getFullYear() - dateToCal.getFullYear();
-  return console.info(yearsTrans);
+  return console.info(
+    `Del año ${dateToCal.getFullYear()} a el año actual ${actDate.getFullYear()} hay ${yearsTrans} años`
+  );
 };
 
 calDate(1999, 7, 17);
+
+/**/
