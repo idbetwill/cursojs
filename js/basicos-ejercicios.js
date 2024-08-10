@@ -499,3 +499,17 @@ const validName = (name = undefined) => {
 };
 
 validName("Pedro");
+
+// **********     Ejercicio 20     **********
+console.log("**********     Ejercicio 20     **********");
+
+const validMail = (mail = undefined) => {
+  let validM = typeof mail === "string" && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail.trim());
+  validM
+    ? console.info(`${mail} es un email válido`)
+    : console.info(`${mail} es un email inválido.`);
+  return validM;
+};
+
+validMail("correo@correo.com");
+validMail("ccom");
