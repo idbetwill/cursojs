@@ -486,3 +486,16 @@ const vocaCons = (striVocCon = undefined) => {
 };
 
 vocaCons("Hola Mundo");
+
+// **********     Ejercicio 19     **********
+console.log("**********     Ejercicio 19     **********");
+
+const validName = (name = undefined) => {
+  let valid = typeof name === "string" && /^[A-Za-zÁÉÍÓÚáéíóúñÑ\s]+$/.test(name.trim());
+  valid
+    ? console.info(`${name} es un nombre válido`)
+    : console.info(`${name} es un nombre inválido.`);
+  return valid;
+};
+
+validName("Pedro");
