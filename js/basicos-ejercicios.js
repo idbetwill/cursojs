@@ -452,7 +452,7 @@ const calDate = (year = undefined, month = undefined, day = undefined) => {
     console.warn("No escribió fecha válida");
   if (typeof year !== "number" && typeof year !== "number" && typeof day !== "number")
     console.error("Debe ingresar el formato de fecha Año/Mes/Día en números");
-  if (Math.sign(year, month, day) === -1) return console.error("El número no puede ser negativo");
+  if (Math.sign(year, month, day) === -1) console.error("El número no puede ser negativo");
   let dateToCal = new Date(year, month, day);
   let actDate = new Date();
   let yearsTrans = actDate.getFullYear() - dateToCal.getFullYear();
@@ -466,3 +466,23 @@ calDate(1999, 7, 17);
 /*18) Programa una función que dada una cadena de texto cuente el número de vocales y consonantes, pe. miFuncion("Hola Mundo") devuelva Vocales: 4, Consonantes: 5.
 19) Programa una función que valide que un texto sea un nombre válido, pe. miFuncion("Jonathan MirCha") devolverá verdadero.
 20) Programa una función que valide que un texto sea un email válido, pe. miFuncion("jonmircha@gmail.com") devolverá verdadero.*/
+
+// **********     Ejercicio 18     **********
+console.log("**********     Ejercicio 18     **********");
+
+const vocaCons = (striVocCon = undefined) => {
+  if (striVocCon === undefined) console.warn("No escribió una cadena de texto válida");
+  if (typeof striVocCon !== "string") console.error("Solo puede ingresar cadenas de textos");
+  const striVocConOr = striVocCon;
+  const vowels = "aeiouáéíóú";
+  striVocCon = striVocCon.toLowerCase().split("");
+
+  let numVow = striVocCon.filter((char) => vowels.includes(char)).length;
+  let numCon = striVocCon.filter(
+    (char) => /[a-záéíóúüñ]/.test(char) && !vowels.includes(char)
+  ).length;
+
+  return console.info(`${numVow} Vocales y ${numCon} Consonantes tiene ${striVocConOr}`);
+};
+
+vocaCons("Hola Mundo");
