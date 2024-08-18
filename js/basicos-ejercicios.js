@@ -527,10 +527,18 @@ console.log("**********     Ejercicio 21     **********");
 
 const elevNum = (num1 = undefined) => {
   if (num1 === undefined) console.warn("No se definió la lista de números");
-  if (num1 !== "number" && num1 !== "Array") console.warn("No ingresó valores válidos");
-
   const result = num1.map((num1) => num1 * num1);
   console.info(result);
 };
 
 elevNum([1, 4, 5]);
+
+// **********     Ejercicio 22     **********
+console.log("**********     Ejercicio 22     **********");
+
+const numMa = (num = undefined) => {
+  if (num === undefined) console.warn("No se definió la lista de números");
+  return console.info(`El numero mayor del array ${num} es ${Math.max(...num)}`);
+};
+
+numMa([1, 4, 5, 11]);
