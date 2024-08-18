@@ -568,17 +568,16 @@ parInp([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]);
 // **********     Ejercicio 24     **********
 console.log("**********     Ejercicio 24     **********");
 
-const parInp = (listNum = undefined) => {
-  if (listNum === undefined) console.warn("No se definió la lista de números");
-  const pares = listNum.filter((n) => n % 2 === 0);
-  const impares = listNum.filter((n) => n % 2 !== 0);
+const order = (numbers = undefined) => {
+  if (numbers === undefined) console.warn("No se definió la lista de números");
 
-  const resultPeI = {
-    pares: pares,
-    impares: impares,
+  const compareNumbers = function comp(a, b) {
+    return a - b;
   };
 
-  console.info(resultPeI);
+  numbers.sort(compareNumbers);
+
+  console.info(numbers);
 };
 
-parInp([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]);
+order([9, 6, 1, 3, 2, 7, , 4, 5, 8, 0]);
