@@ -542,3 +542,21 @@ const numMa = (num = undefined) => {
 };
 
 numMa([1, 4, 5, 11]);
+
+// **********     Ejercicio 22     **********
+console.log("**********     Ejercicio 23     **********");
+
+const parInp = (listNum = undefined) => {
+  if (listNum === undefined) console.warn("No se definió la lista de números");
+  const pares = listNum.filter((n) => n % 2 === 0);
+  const impares = listNum.filter((n) => n % 2 !== 0);
+
+  const resultPeI = {
+    pares: pares,
+    impares: impares,
+  };
+
+  console.info(resultPeI);
+};
+
+parInp([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]);
