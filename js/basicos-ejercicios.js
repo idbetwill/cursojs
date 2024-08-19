@@ -594,3 +594,17 @@ const del = (listNumb = undefined) => {
 };
 
 del([1, 1, 2, 3, 4, 5, 6, 6, 6, 7]);
+
+// **********     Ejercicio 26     **********
+console.log("**********     Ejercicio 26     **********");
+
+const prom = (listProm = undefined) => {
+  let numMax = Math.max(...listProm);
+  let numMin = Math.min(...listProm);
+
+  let prome = (numMax + numMin) / 2;
+
+  console.info(`El promedio de la lista ${listProm} es ${prome}`);
+};
+
+prom([1, 4, 3]);
