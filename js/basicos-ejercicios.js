@@ -581,3 +581,16 @@ const order = (numbers = undefined) => {
 };
 
 order([9, 6, 1, 3, 2, 7, , 4, 5, 8, 0]);
+
+// **********     Ejercicio 24     **********
+console.log("**********     Ejercicio 24     **********");
+
+const del = (listNumb = undefined) => {
+  const selDel = listNumb.filter(function (item, index, array) {
+    return array.indexOf(item) === index;
+  });
+
+  console.info(selDel);
+};
+
+del([1, 1, 2, 3, 4, 5, 6, 6, 6, 7]);
