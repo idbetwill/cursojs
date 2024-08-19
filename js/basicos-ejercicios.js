@@ -635,3 +635,153 @@ Biography, Comedy, Crime, Documentary ,Drama, Family, Fantasy,
 Film Noir, Game-Show, History, Horror, Musical, Music, Mystery,
 News, Reality-TV, Romance, Sci-Fi, Short, Sport, Talk-Show, Thriller,
 War, Western. */
+
+class Film {
+  static genresAccepted() {
+    return [
+      "Action",
+      "Adult",
+      "Adventure",
+      "Animation",
+      "Biography",
+      "Comedy",
+      "Crime",
+      "Documentary",
+      "Drama",
+      "Family",
+      "Fantasy",
+      "Film Noir",
+      "Game-Show",
+      "History",
+      "Horror",
+      "Musical",
+      "Music",
+      "Mystery",
+      "News",
+      "Reality-TV",
+      "Romance",
+      "Sci-Fi",
+      "Short",
+      "Sport",
+      "Talk-Show",
+      "Thriller",
+      "War",
+      "Western",
+    ];
+  }
+  constructor(idIMDB, titulo, director, anoEstreno, paises, generos, calificacion) {
+    this.validateDates(idIMDB, titulo, director, anoEstreno, paises, generos, calificacion);
+    this.idIMDB = idIMDB;
+    this.titulo = titulo;
+    this.director = director;
+    this.anoEstreno = parseInt(anoEstreno, 10);
+    this.paises = paises;
+    this.generos = generos;
+    this.calificacion = parseFloat(calificacion);
+  }
+
+  // Validación y asignación
+  validateDates(idIMDB, titulo, director, anoEstreno, paises, generos, calificacion) {
+    // Validar ID IMDB
+    const idPattern = /^[A-Z]{2}\d{7}$/;
+    if (!idPattern.test(idIMDB)) {
+      throw new Error("ID IMDB inválido. Debe tener 2 letras seguidas de 7 números.");
+    }
+    if (titulo.length > 100) {
+      throw new Error("El título no debe exceder los 100 caracteres.");
+    }
+    if (director.length > 50) {
+      throw new Error("El nombre del director no debe exceder los 50 caracteres.");
+    }
+    if (!/^\d{4}$/.test(anoEstreno) || isNaN(anoEstreno)) {
+      throw new Error("El año de estreno debe ser un número entero de 4 dígitos.");
+    }
+    if (!Array.isArray(paises)) {
+      throw new Error("El país o países deben ser introducidos en forma de arreglo.");
+    }
+    if (!Array.isArray(generos)) {
+      throw new Error("Los géneros deben ser introducidos en forma de arreglo.");
+    }
+    const generosAceptados = Pelicula.generosAceptados();
+    for (const genero of generos) {
+      if (!generosAceptados.includes(genero)) {
+        throw new Error(`Género no aceptado: ${genero}`);
+      }
+    }
+    if (
+      isNaN(calificacion) ||
+      calificacion < 0 ||
+      calificacion > 10 ||
+      !/^(\d(\.\d)?)?$/.test(calificacion)
+    ) {
+      throw new Error(
+        "La calificación debe ser un número entre 0 y 10 con una posición decimal como máximo."
+      );
+    }
+  }
+
+  // Método para obtener la ficha técnica
+  getTechnicalSheet() {
+    return {
+      idIMDB: this.idIMDB,
+      titulo: this.titulo,
+      director: this.director,
+      anoEstreno: this.anoEstreno,
+      paises: this.paises,
+      generos: this.generos,
+      calificacion: this.calificacion,
+    };
+  }
+}
+
+// Ejemplo de cómo instanciar la clase a partir de un arreglo de datos
+const filmDates = [
+  {
+    idIMDB: "tt1234567",
+    titulo: "Película de Acción",
+    director: "Director Nombre",
+    anoEstreno: "2023",
+    paises: ["USA"],
+    generos: ["Action", "Adventure"],
+    calificacion: "8.7",
+  },
+  {
+    idIMDB: "tt2345678",
+    titulo: "Comedia Divertida",
+    director: "Otro Director",
+    anoEstreno: "2022",
+    paises: ["UK"],
+    generos: ["Comedy"],
+    calificacion: "7.5",
+  },
+  {
+    idIMDB: "tt3456789",
+    titulo: "Drama Intenso",
+    director: "Director A",
+    anoEstreno: "2021",
+    paises: ["Canada"],
+    generos: ["Drama", "Thriller"],
+    calificacion: "9.1",
+  },
+];
+
+try {
+  const films = filmDates.map(
+    (datos) =>
+      new Film(
+        datos.idIMDB,
+        datos.titulo,
+        datos.director,
+        datos.anoEstreno,
+        datos.paises,
+        datos.generos,
+        datos.calificacion
+      )
+  );
+
+  films.forEach((film) => {
+    console.log(film.getTechnicalSheet());
+  });
+} catch (error) {
+  console.error(error.message);
+}
