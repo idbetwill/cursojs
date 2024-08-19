@@ -527,11 +527,17 @@ console.log("**********     Ejercicio 21     **********");
 
 const elevNum = (num1 = undefined) => {
   if (num1 === undefined) console.warn("No se definió la lista de números");
+<<<<<<< HEAD
+=======
+  if (num1 !== "number" && num1 !== "Array") console.warn("No ingresó valores válidos");
+
+>>>>>>> 5808f2f (Update excersise 21)
   const result = num1.map((num1) => num1 * num1);
   console.info(result);
 };
 
 elevNum([1, 4, 5]);
+<<<<<<< HEAD
 
 // **********     Ejercicio 22     **********
 console.log("**********     Ejercicio 22     **********");
@@ -785,3 +791,5 @@ try {
 } catch (error) {
   console.error(error.message);
 }
+=======
+>>>>>>> 5808f2f (Update excersise 21)
