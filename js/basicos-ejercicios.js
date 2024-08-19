@@ -630,4 +630,8 @@ La clase recibirá un objeto al momento de instanciarse con los siguentes datos:
     instancias de la clase de forma automatizada e imprime la ficha técnica 
     de cada película.
 
-* Géneros Aceptados: Action, Adult, Adventure, Animation, Biography, Comedy, Crime, Documentary ,Drama, Family, Fantasy, Film Noir, Game-Show, History, Horror, Musical, Music, Mystery, News, Reality-TV, Romance, Sci-Fi, Short, Sport, Talk-Show, Thriller, War, Western. */
+* Géneros Aceptados: Action, Adult, Adventure, Animation,
+Biography, Comedy, Crime, Documentary ,Drama, Family, Fantasy,
+Film Noir, Game-Show, History, Horror, Musical, Music, Mystery,
+News, Reality-TV, Romance, Sci-Fi, Short, Sport, Talk-Show, Thriller,
+War, Western. */
