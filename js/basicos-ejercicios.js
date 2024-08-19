@@ -582,8 +582,8 @@ const order = (numbers = undefined) => {
 
 order([9, 6, 1, 3, 2, 7, , 4, 5, 8, 0]);
 
-// **********     Ejercicio 24     **********
-console.log("**********     Ejercicio 24     **********");
+// **********     Ejercicio 25     **********
+console.log("**********     Ejercicio 25     **********");
 
 const del = (listNumb = undefined) => {
   const selDel = listNumb.filter(function (item, index, array) {
