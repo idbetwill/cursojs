@@ -470,7 +470,7 @@ calDate(1999, 7, 17); */
 20) Programa una función que valide que un texto sea un email válido, pe. miFuncion("jonmircha@gmail.com") devolverá verdadero.*/
 
 // **********     Ejercicio 18     **********
-console.log("**********     Ejercicio 18     **********");
+/* console.log("**********     Ejercicio 18     **********");
 
 const vocaCons = (striVocCon = undefined) => {
   if (striVocCon === undefined && typeof striVocCon !== "string")
@@ -516,12 +516,12 @@ const validMail = (mail = undefined) => {
 };
 
 validMail("correo@correo.com");
-validMail("ccom");
+validMail("ccom"); */
 
 /* 21) Programa una función que dado un array numérico devuelve otro array con los números elevados al cuadrado, pe. mi_funcion([1, 4, 5]) devolverá [1, 16, 25].
 22) Programa una función que dado un array devuelva el número mas alto y el más bajo de dicho array, pe. miFuncion([1, 4, 5, 99, -60]) devolverá [99, -60].
 23) Programa una función que dado un array de números devuelva un objeto con 2 arreglos en el primero almacena los números pares y en el segundo los impares, pe. miFuncion([1,2,3,4,5,6,7,8,9,0]) devolverá {pares: [2,4,6,8,0], impares: [1,3,5,7,9]}. */
-
+/*
 // **********     Ejercicio 21     **********
 console.log("**********     Ejercicio 21     **********");
 
@@ -560,12 +560,12 @@ const parInp = (listNum = undefined) => {
   console.info(resultPeI);
 };
 
-parInp([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]);
+parInp([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]); */
 
 /* 24) Programa una función que dado un arreglo de números devuelva un objeto con dos arreglos, el primero tendrá los numeros ordenados en forma ascendente y el segundo de forma descendiente, pe. miFuncion([7, 5,7,8,6]) devolverá { asc: [5,6,7,7,8], desc: [8,7,7,6,5] }.
 25) Programa una función que dado un arreglo de elementos, elimine los duplicados, pe. miFuncion(["x", 10, "x", 2, "10", 10, true, true]) devolverá ["x", 10, 2, "10", true].
 26) Programa una función que dado un arreglo de números obtenga el promedio, pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5. */
-
+/*
 // **********     Ejercicio 24     **********
 console.log("**********     Ejercicio 24     **********");
 
@@ -608,7 +608,7 @@ const prom = (listProm = undefined) => {
   console.info(`El promedio de la lista ${listProm} es ${prome}`);
 };
 
-prom([1, 4, 3]);
+prom([1, 4, 3]); */
 
 /* 27) Programa una clase llamada Pelicula.
 
